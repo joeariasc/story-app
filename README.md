@@ -20,3 +20,18 @@ A small rest api to learn a little bit of Kotlin with the following features
 ## Database diagram
 
 ![img.png](img.png)
+
+## Prerequisites
+
+- Java JDK11
+- IntelliJ IDEA Ultimate [IntelliJ IDEA](https://www.jetbrains.com/help/idea/installation-guide.html)
+- PostgreSQL
+
+## Run a Ktor app
+open the Application.kt file placed by the following path:
+
+```sh
+src/main/kotlin/co/wawand/Application.kt
+```
+
+To run the application, click the gutter icon next to the main function and choose Run 'ApplicationKt'.
