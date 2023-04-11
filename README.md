@@ -26,6 +26,16 @@ A small rest api to learn a little bit of Kotlin with the following features
 - Java JDK11
 - IntelliJ IDEA Ultimate [IntelliJ IDEA](https://www.jetbrains.com/help/idea/installation-guide.html)
 - PostgreSQL
+- Before to run the app, please create the database from the PostgreSql console.
+```sh
+CREATE DATABASE storyapp;
+```
+- and please update the user on the file DatabaseFactory.kt on the line
+```sh
+config.jdbcUrl = "jdbc:postgresql:storyapp?user=postgresUser"
+```
+
+
 
 ## Run a Ktor app
 open the Application.kt file placed by the following path:
