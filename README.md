@@ -45,3 +45,81 @@ src/main/kotlin/co/wawand/Application.kt
 ```
 
 To run the application, click the gutter icon next to the main function and choose Run 'ApplicationKt'.
+
+the server should be running to accept requests at the http://127.0.0.1:8080
+
+## Start to send requests to the server
+The endpoints available to send requests
+
+### Authentication routes
+
+>Register User (POST)
+```sh
+http://127.0.0.1:8080/auth/register
+```
+Body request
+```sh
+{
+  "fullName":"John Doe",
+  "email": "jdoe@fake.co",
+  "password": "123456",
+  "nickName": "jdoe"
+}
+```
+
+Body response
+```sh
+{
+  "data": {
+    "id": 11,
+    "fullName": "John Doe",
+    "nickName": "jdoe",
+    "email": "jdoe@fake.co",
+    "authToken": "stringToken",
+    "createdAt": "2023-04-11T15:42:19.158813"
+  },
+  "message": "User successfully registered"
+}
+```
+>Login (POST)
+```sh
+http://127.0.0.1:8080/auth/login
+```
+Body request
+```sh
+{
+  "email": "jdoe@fake.co",
+  "password": "123456"
+}
+```
+
+Body response
+```sh
+{
+  "data": {
+    "id": 11,
+    "fullName": "John Doe",
+    "nickName": "jdoe",
+    "email": "jdoe@fake.co",
+    "authToken": "stringToken",
+    "createdAt": "2023-04-11T15:42:19.158813"
+  },
+  "message": "User successfully logged in"
+}
+```
+
+### More routes
+
+>User Info (GET)
+```sh
+http://127.0.0.1:8080/user
+```
+Add to the headers the Authorization key
+```sh
+{
+  "fullName":"John Doe",
+  "email": "jdoe@fake.co",
+  "password": "123456",
+  "nickName": "jdoe"
+}
+```
