@@ -114,7 +114,7 @@ Body response
 ```sh
 http://127.0.0.1:8080/user
 ```
-Add to the headers the Authorization key
+Sending a request with an Authorization Bearer Header:
 ```sh
 {
   "fullName":"John Doe",
